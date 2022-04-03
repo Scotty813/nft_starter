@@ -1,5 +1,7 @@
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 
+import Image from "next/image";
+
 function NFTDropPage() {
   const connectWithMetamask = useMetamask();
   const address = useAddress();
@@ -10,11 +12,14 @@ function NFTDropPage() {
       <div className="bg-gradient-to-br from-cyan-500 to-rose-500 lg:col-span-4">
         <div className="flex flex-col items-center justify-center py-2 lg:min-h-screen">
           <div className="bg-gradient-to-br from-yellow-400 to-purple-600 p-2 rounded-xl">
-            <img
-              className="w-44 rounded-xl object-cover lg:h-96 lg:w-72"
-              src="https://links.papareact.com/8sg"
-              alt="bored_ape"
-            />
+            <div className="w-44 lg:h-96 lg:w-72 rounded-xl relative">
+              <Image
+                src="https://links.papareact.com/8sg"
+                alt="bored ape"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           </div>
 
           <div className="text-center p-5 space-y-2">
@@ -57,11 +62,14 @@ function NFTDropPage() {
           className="mt-10 flex flex-1 flex-col items-center space-y-6 
         text-center lg:space-y-0 lg:justify-center"
         >
-          <img
-            className="w-80 object-cover pb-10 lg:h-40"
-            src="https://links.papareact.com/bdy"
-            alt="some_img"
-          />
+          <div className="w-80 mb-10 lg:h-40 relative">
+            <Image
+              src="https://links.papareact.com/bdy"
+              alt="some img"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
 
           <h1 className="text-3xl lg:text-5xl font-extrabold">
             The PAPAFAM Ape Coding Club | NFT Drop
